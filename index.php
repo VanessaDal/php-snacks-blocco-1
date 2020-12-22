@@ -18,15 +18,32 @@ body{
     width: 100%;
     height: 600px;
     display:flex;
-    flex-direction:column;
-    align-content:center;
-    justify-content:space-between;
+    justify-content:center;
+    align-items:center;
        
 }
 
-h1{
-    color:red;
+.riuscito h1{
+    color:green;
 
+}
+
+.negato h1{
+    color:#8B0101;
+}
+
+.accesso{
+    width:400px;
+    height:200px;
+    background-color:lightgreen;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.negato{
+    background-color:#FF6961;
 }
 </style>
 
@@ -53,11 +70,11 @@ Se tutto è ok stampare "Accesso riuscito", altrimenti
 <?php 
     if((strlen($name) > 3) && (strpos($mail, ".") !==false) && (strpos($mail, "@") !==false) && (is_numeric($age)===true)) {
 ?>
-        <div> <h1>ACCESSO RIUSCITO</h1></div>
+        <div class="accesso riuscito"> <h1>ACCESSO RIUSCITO</h1></div>
 <?php 
     } else {
 ?>
-        <div><h1>ACCESSO NEGATO</h1></div>
+        <div class="accesso negato"><h1>ACCESSO NEGATO</h1></div>
 <?php
     }
 ?>
