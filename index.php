@@ -51,14 +51,15 @@ Se tutto è ok stampare "Accesso riuscito", altrimenti
 
 
 <?php 
-    if((strlen($name) > 3) && (strpos($mail, ".") !==false) && (strpos($mail, "@") !==false) && (is_numeric($age)===true))
-    {?>
+    if((strlen($name) > 3) && (strpos($mail, ".") !==false) && (strpos($mail, "@") !==false) && (is_numeric($age)===true)) {
+?>
         <div> <h1>ACCESSO RIUSCITO</h1></div>
-    <?php}
-    else{?>
+<?php 
+    } else {
+?>
         <div><h1>ACCESSO NEGATO</h1></div>
-    <?php}
-
+<?php
+    }
 ?>
 
 
